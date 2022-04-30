@@ -1,0 +1,45 @@
+{% extends 'parts/common.html' %}
+
+{% block content %}
+    <main class="main-content">
+
+        <section class="site-section-hero bg-image" style="background-image: url('{{ about_list.0.image.url }}');"
+                 data-stellar-background-ratio="0.5" id="section-home">
+            <div class="row justify-content-center align-items-center mx-auto">
+                <div class="col-md-7 text-center">
+                    <h1 class="text-white heading text-uppercase" data-aos="fade-up">{{ about_list.0.title }}</h1>
+                    <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <em> by</em> {{ about_list.0.author }}
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container-fluid">
+
+
+            <div class="site-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 blog-content pr-lg-5">
+                            <p class="lead">{{ about_list.0.text|safe }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            <div class="row justify-content-center mx-auto">
+            <div class="col-md-12 text-center py-2">
+                <p class="colorlib">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                    All rights reserved | This template is made by <a
+                        href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </div>
+    </main>
+{% endblock content %}
