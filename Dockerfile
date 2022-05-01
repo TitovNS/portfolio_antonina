@@ -5,8 +5,8 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /code
 
-RUN apk update \
-    && apk add postgresql-dev gcc python3-dev musl-dev
+RUN apt update \
+    && apt install -y postgresql-dev gcc python3-dev musl-dev
 
 COPY req.txt /code/
 RUN pip install -r req.txt
