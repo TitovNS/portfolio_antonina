@@ -88,4 +88,8 @@ __pycache__/
 local_settings.py
 
 .env
+.env.prod
+.env.db
+.env.prod.db
+.env.prod.proxy
 db.sqlite3
